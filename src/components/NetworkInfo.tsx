@@ -1,12 +1,12 @@
-import colors from 'assets/styles/colors';
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
+import colors from 'assets/styles/colors';
 
 interface NetworkInfoProps {
-  ipAddress: string;
-  location: string;
-  timezone: string;
-  isp: string;
+  ipAddress: string | undefined;
+  location: string | undefined;
+  timezone: string | undefined;
+  isp: string | undefined;
 }
 
 const NetworkInfo: React.FC<NetworkInfoProps> = ({
@@ -27,7 +27,7 @@ const NetworkInfo: React.FC<NetworkInfoProps> = ({
       </View>
       <View style={styles.column}>
         <Text style={styles.title}>Timezone</Text>
-        <Text style={styles.value}>{timezone}</Text>
+        <Text style={styles.value}>UTC {timezone}</Text>
       </View>
       <View style={styles.column}>
         <Text style={styles.title}>ISP</Text>
@@ -41,12 +41,12 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     backgroundColor: colors.black,
-    paddingVertical: 12,
+    paddingVertical: 20,
   },
   column: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
+    // justifyContent: 'center',
   },
   title: {
     color: colors.white,
@@ -54,6 +54,7 @@ const styles = StyleSheet.create({
     marginBottom: 4,
   },
   value: {
+    textAlign: 'center',
     color: colors.white,
     fontSize: 12,
   },

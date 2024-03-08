@@ -5,5 +5,10 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.backgroundColor,
+  },
+  image: {
+    height: 160,
+    marginHorizontal: 20,
+    marginBottom: 16
   }
 });

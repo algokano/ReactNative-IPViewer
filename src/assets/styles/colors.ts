@@ -4,7 +4,8 @@ const colors = Object.freeze({
   gray: '#EAEAEB',
   backgroundColor: '#ffffff',
   black: '#000000',
-  blue: '#3C53CA'
+  blue: '#3C53CA',
+  red: '#C04158',
 });
 
 export default colors;

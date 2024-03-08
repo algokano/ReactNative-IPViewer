@@ -18,5 +18,8 @@ export default StyleSheet.create({
   },
   inputWrapper: {
     width: '60%'
+  },
+  carousel: {
+    marginTop: 20,
   }
 });

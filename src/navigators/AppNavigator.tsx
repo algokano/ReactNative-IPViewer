@@ -1,7 +1,6 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {NavigationContainer} from '@react-navigation/native';
-import NavigationService from '../navigators/NavigationService';
 import colors from '../assets/styles/colors';
 import {screenNames, headerTitles} from './Screens';
 
@@ -25,7 +24,7 @@ const TabNavigation = createBottomTabNavigator();
 
 function AppNavigator() {
   return (
-    <NavigationContainer ref={NavigationService.ref}>
+    <NavigationContainer>
       <TabNavigation.Navigator
         screenOptions={{
           tabBarActiveTintColor: colors.brandColor,
