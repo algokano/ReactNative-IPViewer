@@ -5,5 +5,12 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.backgroundColor,
+  },
+  flatList: {
+    paddingTop: 20
+  },
+  row: {
+    marginHorizontal: 20,
+    marginBottom: 4
   }
 });
