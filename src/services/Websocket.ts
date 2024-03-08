@@ -15,7 +15,7 @@ class WS {
   static ws: WebSocket | null = null;
 
   static init(onClose?: () => void, onOpen?: () => void): void {
-    this.ws = new WebSocket(`wss://api.tiingo.com/fx`);
+    this.ws = new WebSocket(config.WEBSOCKET_URL);
     this.ws.onclose = () => {
       this.ws = null;
       console.log('closed');

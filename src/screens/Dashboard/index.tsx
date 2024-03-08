@@ -5,6 +5,7 @@ import Components from 'components';
 import styles from './styles';
 import {local_images} from '../../constants';
 import {useAppData} from '../../providers/AppDataProvider';
+import config from '../../config';
 
 const width = Dimensions.get('window').width;
 
@@ -14,9 +15,9 @@ function Dashboard(): React.ReactElement {
   const [loading, setLoading] = useState(false);
 
   const fetchIpInfo = async (text?: string) => {
-    let URL = 'https://ipwho.is';
+    let URL = config.IPWHOIS_API_URL;
     if (text) {
-      URL = `https://ipwho.is/${text}`;
+      URL = `${config.IPWHOIS_API_URL}/${text}`;
     }
     setLoading(true);
     try {

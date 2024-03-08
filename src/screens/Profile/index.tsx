@@ -6,8 +6,7 @@ import {useAppData} from '../../providers/AppDataProvider';
 import {local_images} from '../../constants';
 
 function Profile(): React.ReactElement {
-  const {networkInfo, selectedImage, setNetworkInfo, setSelectedImage} =
-    useAppData();
+  const {networkInfo, selectedImage} = useAppData();
   return (
     <View style={styles.container}>
       <View style={styles.image}>
