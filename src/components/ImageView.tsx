@@ -19,8 +19,13 @@ const ImageView: React.FC<ImageViewProps> = ({
   onPress,
 }) => {
   return (
-    <TouchableOpacity disabled={!onPress} style={styles.container}>
+    <TouchableOpacity
+      testID="touchableOpacity"
+      disabled={!onPress}
+      style={styles.container}
+      onPress={onPress}>
       <Image
+        testID="image"
         resizeMode={'cover'}
         source={imageSource}
         style={[styles.image, isSelected && styles.redBorder]}

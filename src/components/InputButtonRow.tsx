@@ -41,7 +41,10 @@ const InputButtonRow: React.FC<InputButtonRowProps> = ({
         onSubmitEditing={event => onPress(event.nativeEvent.text)}
         keyboardType="numeric"
       />
-      <TouchableOpacity style={styles.button} onPress={handleButtonPress}>
+      <TouchableOpacity
+        testID="button"
+        style={styles.button}
+        onPress={handleButtonPress}>
         <ArrowRight />
       </TouchableOpacity>
     </View>
